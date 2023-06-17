@@ -1,4 +1,3 @@
-import React from 'react';
 import { createSlice } from '@reduxjs/toolkit';
 
 
@@ -36,7 +35,7 @@ export const {
 
 export const selectSignedIn = (state) => state.user.isSignedIn;
 export const selectUserData = (state) => state.user.userData;
-export const selectUserInpot = (state) => state.user.searchInput;
+export const selectUserInput = (state) => state.user.searchInput;
 export const selectBlogData = (state) => state.user.blogData;
 
 export default userSlice.reducer;

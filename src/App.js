@@ -1,16 +1,21 @@
+import React from "react";
+import { useSelector } from "react-redux";
+import Blogs from "./components/Blogs";
+import Homepage from "./components/Homepage";
+import Navbar from "./components/Navbar";
+import { selectSignedIn } from "./features/userSlice";
+import "./styling/app.css";
 
-import './App.css';
-import './components/Homepage';
-import Homepage from './components/Homepage';
-import Navbar from './components/Navbar';
+const App = () => {
+  const isSignedIn = useSelector(selectSignedIn);
 
-function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Navbar />
-     <Homepage />
+      <Homepage />
+      {isSignedIn && <Blogs />}
     </div>
   );
-}
+};
 
 export default App;
